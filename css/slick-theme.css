@@ -71,7 +71,7 @@
     line-height: 1;
 
     opacity: .75;
-    color: white;
+    color: rgba(255, 255, 255, 0);
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -97,7 +97,7 @@
 
 .slick-next
 {
-    right: -25px;
+    right: 5px;
 }
 [dir='rtl'] .slick-next
 {
@@ -178,11 +178,11 @@
 .slick-dots li button:before
 {
     font-family: 'slick';
-    font-size: 6px;
-    line-height: 20px;
+    font-size: 10px;
+    line-height: 0px;
 
     position: absolute;
-    top: 0;
+    top: -25px;
     left: 0;
 
     width: 20px;
@@ -191,8 +191,8 @@
     content: '•';
     text-align: center;
 
-    opacity: .25;
-    color: black;
+    opacity: .45;
+    color: rgb(255, 255, 255);
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

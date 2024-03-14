@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
@@ -24,7 +24,6 @@ h4 {
   /*###### Formatação dos textos #####*/
   font-size: 1.5em;
 }
-
 
 h1 {
   padding: 17px 0px;
@@ -192,7 +191,7 @@ img {
 
 .modalidade h2 {
   background: #ffc300;
-  padding: 0 20px;
+  padding: 5px 20px;
   font-size: 3em;
   text-align: center;
   width: max-content;
@@ -206,6 +205,7 @@ img {
 }
 
 .boxmodalidade > div {
+  justify-content: space-between;
   flex-direction: column;
   display: flex;
   background: #1a1a1a;
@@ -215,7 +215,7 @@ img {
 }
 
 .boxmodalidade div div {
-   padding: 0 10px;
+  padding: 0 10px;
   text-align: center;
 }
 
@@ -232,7 +232,7 @@ img {
   background: #ffc300;
   padding: 10px 20px;
   border-radius: 10px 5px;
-  align-self: flex-end;
+  align-self: center;
   color: black;
 }
 
@@ -247,32 +247,29 @@ img {
 .boxmodalidade h3 {
   font-size: 2.5em;
   color: #ffffff;
-  padding: 0px 20px;
+  padding: 10px 20px;
   text-align: center;
 }
 
 /*######## edits Banners ##########*/
 
-.banner .slick-prev:before, 
-.banner .slick-next:before
-{
-    font-size: 40px;
-    opacity: .30;
-    color: #ffc300;
+.bannerEvento .slick-prev:before, /* .banner no começo faz com que só funcione noa classe banner*/
+.bannerEvento .slick-next:before {
+  font-size: 40px;
+  opacity: 0.3;
+  color: #e79924;
 }
 
-.banner .slick-prev
-{
-    left: 25px;
-    z-index: 2;
+.bannerEvento .slick-prev {
+  left: 5px;
+  z-index: 2;
 }
 
-.banner .slick-next
-{
-    right: 45px;
+.bannerEvento .slick-next {
+  right: 45px;
 }
 
-.banner {
+.bannerEvento {
   border-top: #ffc300 solid 5px;
   border-bottom: #ffc300 solid 7px;
 }
@@ -280,50 +277,58 @@ img {
 /*########## Fim edits Banner  ##########*/
 /*########## Começo Blog #########*/
 .blog {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog h2 {
+  background: #ffc300;
+  padding: 5px 20px;
+  font-size: 3em;
+  text-align: center;
+  width: max-content;
+  border-radius: 7px 5px;
+  margin: 0 auto;
+}
+
+.blog section {
   padding: 40px 5%;
   display: flex;
   justify-content: space-between;
-  
 }
 
-.blogItem {
+.blog section div {
   position: relative;
-  width: 23%; /* Distribui uniformemente as 4 imagens */
+  width: 400px;
+  height: 330px;
 }
 
-.blog img{
-  box-shadow: 1px -4px 15px #e79924;
-}
-
-.blogTexto {
-  opacity: 0;
+.blog section div div {
+  height: auto;
+  background: #003566;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px; /* Ajuste conforme necessário */
-  text-align: end;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.5s;
+  top: 140px;
+  left: 10px;
 }
 
-.blogItem:hover .blogTexto {
-  opacity: 1;
+.blog img {
+  border-radius: 20px;
+  border: #ffc300 solid 3px;
 }
 
-.blogTexto p {
-  color: white;
-  margin: 0; 
+.blog a {
+  background: #ffc300;
+  padding: 10px 20px;
+  border-radius: 10px 5px;
+  align-self: center;
+  color: #000814;
 }
 
-.blogTexto a {
-  padding: 5px 10px;
-  border-radius: 5px;
-  background: #e79924;
-  margin-top: 5px; /* Ajuste conforme necessário */
-  display: inline-block; /* Permite ajustar a margem superior */
+.blog p {
+  align-self: center;
+  color: #000814;
 }
-
 /*########## início Planos ##########*/
 
 .planos {
@@ -342,10 +347,10 @@ img {
   padding: 40px 10px;
   border-radius: 20px;
   transition: transform 0.3ms ease;
-  cursor:  pointer;
+  cursor: pointer;
 }
 
-.planosbox > div:hover{
+.planosbox > div:hover {
   transform: scale(1.1);
 }
 
@@ -396,19 +401,19 @@ img {
   border-radius: 10px 5px;
 }
 
-.plano a:hover { 
-  background: #FFEE29;
+.plano a:hover {
+  background: #ffee29;
 }
 
-.plano span{
+.plano span {
   vertical-align: middle;
   color: #0df00d;
 }
 
 /*######### Fim Planos ##########*/
 /*######## Início Comentários #######*/
-.comentarios{
-  background: linear-gradient(to top, #000814, #001d3d );
+.comentarios {
+  background: linear-gradient(to top, #000814, #001d3d);
 }
 
 /*CARROSEL*/
@@ -434,33 +439,32 @@ img {
 
 /*CARROSEL*/
 
-
-.boxcomentarios{
+.boxcomentarios {
   display: flex;
   padding: 40px 0;
   justify-content: space-between;
 }
 
-.boxcomentarios div > div{
- text-align: center;
+.boxcomentarios div > div {
+  text-align: center;
 }
 
-.boxcomentarios > div{
+.boxcomentarios > div {
   padding: 10px 0;
 }
 
-.boxcomentarios .item{
+.boxcomentarios .item {
   margin: 0 14px;
   padding: 0.2%;
   border: 2px solid #ffc300;
 }
 
-.boxcomentarios span{
+.boxcomentarios span {
   color: #ffc300;
   padding: 5px 0;
 }
 
-.boxcomentarios h2{
+.boxcomentarios h2 {
   font-size: 2em;
   color: #ffffff;
   text-align: center;
@@ -468,20 +472,20 @@ img {
   padding: 5px 0;
 }
 
-.boxcomentarios  p{
+.boxcomentarios p {
   font-size: 1.2em;
-  color: #ffffff ;
+  color: #ffffff;
   letter-spacing: 1px;
-  text-align:center;
+  text-align: center;
   padding: 7px 10px;
   font-style: italic;
 }
 
 /* ######### INICIO RODAPÉ ######### */
 
-.rodape{
+.rodape {
   background: #000814;
-  color:#ffffff;
+  color: #ffffff;
   border-top: solid 1px #e79924;
   box-shadow: 0px -4px 15px #e79924;
   padding: 40px;
@@ -492,11 +496,11 @@ img {
   text-align: center;
 }
 
-.rodape div div > img{
+.rodape div div > img {
   width: 500px;
   height: 200px;
   max-width: auto;
-  max-height: auto;  
+  max-height: auto;
 }
 
 .rodape div div div {
@@ -516,9 +520,9 @@ img {
   padding: 20px 40px;
 }
 
-.rodape nav ul li{
-font-size: 2em;
-padding: 5px 0;
+.rodape nav ul li {
+  font-size: 2em;
+  padding: 5px 0;
 }
 
 .rodape h2 {
@@ -526,7 +530,8 @@ padding: 5px 0;
   font-size: 2.5em;
 }
 
-.rodape a, p {
+.rodape a,
+p {
   font-size: 2em;
   color: #ffffff;
   margin: 15px 0;
