@@ -277,6 +277,8 @@ img {
 /*########## Fim edits Banner  ##########*/
 /*########## Começo Blog #########*/
 .blog {
+  background: linear-gradient(to bottom, #003566, #001d3d);
+  height: 500px;
   padding: 40px 0;
   display: flex;
   flex-direction: column;
@@ -292,48 +294,69 @@ img {
   margin: 0 auto;
 }
 
-.blog section {
-  padding: 40px 5%;
-  display: flex;
-  justify-content: space-between;
+.blog h3 {
+  padding: 10px 0;
+  color: #ffc300;
+  font-size: 2em;
+
 }
 
-.blog section div {
+.blog section {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.blog section > div {
+  display: inline-block;
   position: relative;
   width: 400px;
-  height: 330px;
+  margin: 2%;
+  height: 350px;
 }
 
 .blog section div div {
-  height: auto;
-  background: #003566;
+  display: none;
+  border-radius: 18px 18px 0px 0px;
+  text-align: center;
   position: absolute;
-  top: 140px;
-  left: 10px;
+  top: -17px; 
+  left: 3px; 
+  background-color: rgba(0, 29, 61, 0.5);
+  width: 400px;
+  max-height: 350px;
 }
 
 .blog img {
+  position: absolute;
+  top: -20px; 
+  left: 0px; 
+  width: 400px;
+  height: 350px;
   border-radius: 20px;
   border: #ffc300 solid 3px;
 }
 
 .blog a {
+  margin: 10%;
+  text-align: center;
   background: #ffc300;
   padding: 10px 20px;
   border-radius: 10px 5px;
-  align-self: center;
   color: #000814;
 }
 
 .blog p {
-  align-self: center;
-  color: #000814;
+  text-align: center;
+  padding: 5% 0;
+  width: 80%;
+  color: #ffffff;
 }
 /*########## início Planos ##########*/
 
 .planos {
   margin-top: -3px;
-  background: linear-gradient(to bottom, #003566, #001d3d);
+  background: #001d3d;
 }
 
 .planosbox {
@@ -413,7 +436,7 @@ img {
 /*######### Fim Planos ##########*/
 /*######## Início Comentários #######*/
 .comentarios {
-  background: linear-gradient(to top, #000814, #001d3d);
+  background: linear-gradient(to bottom, #001d3d, #000814);
 }
 
 /*CARROSEL*/
