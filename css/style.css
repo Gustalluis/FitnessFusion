@@ -60,13 +60,21 @@ img {
   padding: 10px 15px;
   border-radius: 10px 5px;
   margin-left: 25px;
+  color: #001d3d;
+  transition: background-color 0.3s;
+}
+
+.navegacao:nth-child(2) div:hover {
+  background-color: #ffa500;
 }
 
 .navegacao:nth-child(2) div a {
+  text-transform: uppercase;
+  font-size: 1.5em;
   letter-spacing: 1.5px;
   margin-left: 10px;
   margin-top: 3px;
-  color: black;
+  color: #001d3d;
 }
 
 .navegacao ul {
@@ -180,11 +188,16 @@ img {
   border-radius: 10px 5px;
   align-self: flex-end;
   color: black;
+  transition: background-color 0.3s;
 }
 
+.sobre a:hover {
+  background-color: #ffa500;
+}
 /*####### Fim Sobre #########*/
 /*####### Inicio das modalidades #######*/
 .modalidade {
+  text-transform: uppercase;
   padding-bottom: 40px;
   background: linear-gradient(to bottom, #000814, #003566);
 }
@@ -229,11 +242,18 @@ img {
 }
 
 .boxmodalidade a {
+  position: relative;
   background: #ffc300;
   padding: 10px 20px;
   border-radius: 10px 5px;
   align-self: center;
   color: black;
+  bottom: -15px;
+  transition: background-color 0.3s;
+}
+
+.boxmodalidade a:hover {
+  background-color: #ffa500;
 }
 
 .boxmodalidade p {
@@ -295,10 +315,9 @@ img {
 }
 
 .blog h3 {
-  padding: 10px 0;
-  color: #ffc300;
-  font-size: 2em;
-
+  padding: 15px 0;
+  color: #ffee29;
+  font-size: 2.5em;
 }
 
 .blog section {
@@ -317,20 +336,21 @@ img {
 
 .blog section div div {
   display: none;
-  border-radius: 18px 18px 0px 0px;
+  border-radius: 18px;
   text-align: center;
+  text-transform: uppercase;
   position: absolute;
-  top: -17px; 
-  left: 3px; 
+  top: -17px;
+  left: 3px;
   background-color: rgba(0, 29, 61, 0.5);
   width: 400px;
-  max-height: 350px;
+  height: 350px;
 }
 
 .blog img {
   position: absolute;
-  top: -20px; 
-  left: 0px; 
+  top: -20px;
+  left: 0px;
   width: 400px;
   height: 350px;
   border-radius: 20px;
@@ -344,166 +364,160 @@ img {
   padding: 10px 20px;
   border-radius: 10px 5px;
   color: #000814;
+  transition: background-color 0.3s;
+}
+
+.blog a:hover {
+  background-color: #ffa500;
 }
 
 .blog p {
-  text-align: center;
   padding: 5% 0;
-  width: 80%;
+  width: 100%;
   color: #ffffff;
 }
 /*########## início Planos ##########*/
-
 .planos {
-  margin-top: -3px;
-  background: #001d3d;
-}
-
-.planosbox {
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background-color: #001d3d;
   display: flex;
-  padding: 40px 40px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
 }
-
-.planosbox div {
-  margin: 10px 20px;
-  padding: 40px 10px;
-  border-radius: 20px;
-  transition: transform 0.3ms ease;
-  cursor: pointer;
+.planos h2 {
+  background: #ffc300;
+  padding: 5px 20px;
+  font-size: 3em;
+  text-align: center;
+  width: max-content;
+  border-radius: 7px 5px;
+  margin: 0 auto;
 }
-
-.planosbox > div:hover {
-  transform: scale(1.1);
+.planos div {
+  justify-content: space-around;
+  display: flex;
+  padding: 20px;
 }
 
 .plano {
-  background: #000814;
-}
-
-.plano div:nth-child(1) {
-  background: #ffffff;
-  margin-top: -60px;
-  padding: 20px 40px;
-  border-radius: 10px 10px;
-  border-top: #000814 solid 5px;
+  text-transform: uppercase;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
 }
 
 .plano h2 {
-  margin: 10px 0;
-  text-align: center;
-  font-size: 2.5em;
   color: #000814;
+  font-size: 2.5em;
 }
 
 .plano h3 {
-  text-align: center;
-  font-size: 5em;
-  color: #000814;
+  margin: 10px;
+  color: #ffc300;
+  font-size: 6em;
+  margin-top: 10px;
 }
 
-.plano p {
+.plano li {
+  text-transform: capitalize;
+  margin: 5px;
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.plano .recomendado {
+  position: relative;
+  letter-spacing: 1px;
+  border: #003566 solid 1px;
+  top: -35px;
+  background-color: #ffc300;
+  color: #000814;
+  padding: 5px 10px;
+  border-radius: 10px;
   font-size: 1.5em;
-  color: #ffffff;
-  padding: 10px 0;
-  text-align: center;
-  margin: 20px;
-  letter-spacing: 1.5px;
+  margin-bottom: -30px;
 }
 
-.plano div:nth-child(6) {
-  display: flex;
-  justify-content: center;
-  margin-bottom: -90px;
-}
-
-.plano div a {
-  color: #000814;
-  background: #ffffff;
-  padding: 10px 30px;
-  border-radius: 10px 5px;
+.plano a {
+  background-color: #ffc300;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 .plano a:hover {
-  background: #ffee29;
+  background-color: #ffa500;
 }
 
 .plano span {
   vertical-align: middle;
-  color: #0df00d;
+  color: #00ff00;
 }
-
 /*######### Fim Planos ##########*/
 /*######## Início Comentários #######*/
 .comentarios {
-  background: linear-gradient(to bottom, #001d3d, #000814);
-}
-
-/*CARROSEL*/
-
-.boxcomentarios .slick-prev:before,
-.boxcomentarios .slick-next:before {
-  font-size: 20px;
-  line-height: 1;
-
-  opacity: 0;
-  color: white;
-}
-
-.boxcomentarios .slick-prev {
-  left: -25px;
-  z-index: 10;
-}
-
-.boxcomentarios .slick-next {
-  right: -25px;
-  z-index: 10;
-}
-
-/*CARROSEL*/
-
-.boxcomentarios {
-  display: flex;
+  background-color: #001d3d;
   padding: 40px 0;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
-.boxcomentarios div > div {
+.comentarios > h2 {
+  background: #ffc300;
+  padding: 5px 20px;
+  font-size: 3em;
+  text-align: center;
+  width: max-content;
+  border-radius: 7px 5px;
+  margin: 0 auto;
+}
+
+.comentarios > div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.comentarios > div div {
+  background-color: #003566;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  width: 350px;
   text-align: center;
 }
 
-.boxcomentarios > div {
-  padding: 10px 0;
+.comentarios img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10%;
 }
 
-.boxcomentarios .item {
-  margin: 0 14px;
-  padding: 0.2%;
-  border: 2px solid #ffc300;
-}
-
-.boxcomentarios span {
-  color: #ffc300;
-  padding: 5px 0;
-}
-
-.boxcomentarios h2 {
+.comentarios div div h2 {
   font-size: 2em;
-  color: #ffffff;
-  text-align: center;
-  letter-spacing: 1px;
-  padding: 5px 0;
+  color: #ffc300; /* Amarelo */
+  margin-bottom: -10px;
 }
 
-.boxcomentarios p {
-  font-size: 1.2em;
-  color: #ffffff;
-  letter-spacing: 1px;
-  text-align: center;
-  padding: 7px 10px;
-  font-style: italic;
+.comentarios p {
+  font-size: 2em;
+  line-height: 1.5;
 }
 
+.comentarios span {
+  color: #ffc300;
+  font-size: 3em;
+  margin-bottom: 10px;
+  display: block;
+}
 /* ######### INICIO RODAPÉ ######### */
 
 .rodape {
