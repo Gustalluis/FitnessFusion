@@ -395,6 +395,11 @@ img {
   border-radius: 7px 5px;
   margin: 0 auto;
 }
+
+.planos div:nth-child(2) {
+transform: scale(1.1);
+}
+
 .planos div {
   justify-content: space-around;
   display: flex;
@@ -402,7 +407,6 @@ img {
 }
 
 .plano {
-  text-transform: uppercase;
   flex-direction: column;
   background-color: #fff;
   border-radius: 10px;
@@ -426,7 +430,6 @@ img {
 }
 
 .plano li {
-  text-transform: capitalize;
   margin: 5px;
   color: #555;
   font-size: 18px;
@@ -460,7 +463,8 @@ img {
 }
 
 .plano span {
-  vertical-align: middle;
+  margin-right: 2px;
+  vertical-align: text-bottom;
   color: #00ff00;
 }
 /*######### Fim Planos ##########*/
@@ -483,21 +487,21 @@ img {
 
 .comentarios > div {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .comentarios > div div {
-  background-color: #003566;
+  margin: 0 -20px;
   border-radius: 10px;
-  margin: 20px;
   padding: 20px;
-  width: 350px;
   text-align: center;
 }
-
+.comentarios div div div div {
+  margin: 20px;
+  background: #003566;
+}
 .comentarios img {
-  width: 250px;
-  height: 250px;
+  margin: 0 auto;
   border-radius: 10%;
 }
 

@@ -1,0 +1,52 @@
+@media(width:900px){
+    .navegacao{
+        display: none;
+    }
+    .blog{
+        display: none;
+    }
+    /*sobre */
+    .sobre {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .sobre img{
+        width: 90%;
+        position: relative;
+        left: 5%;
+        
+    }
+    .sobre div img{
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .sobre div:nth-child(2){ 
+        margin: 0 auto;
+        position: relative;
+        bottom: 50px;
+        width: 80%;
+    }
+
+    .boxmodalidade {
+        flex-direction: column;
+    }
+
+    .boxmodalidade > div{
+        margin: 0 200px;
+        margin-bottom: 25px;
+    }
+
+    .planosbox{
+        flex-direction: column;
+        padding: 20px 134px;
+    }
+
+    .planosbox div{
+        margin-bottom: 50px;
+    }
+    .comentarios{
+        flex-direction: column;
+    }
+
+}
