@@ -1,0 +1,1155 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+/********************  FORMATAÇÕES PADRÕES ************************/
+body {
+  /*###### Formatação dos textos #####*/
+  font-size: 11px;
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #000814;
+}
+
+/****** FORMATAÇÃO TEXTO*/
+a,
+h1,
+h2,
+h3,
+h4 {
+  font-size: 1.5em;
+}
+
+.titulo {
+  text-transform: uppercase;
+  background: #ffc300;
+  padding: 10px 20px;
+  font-size: 3em;
+  text-align: center;
+  width: max-content;
+  border-radius: 7px 5px;
+  margin: 40px auto;
+  cursor: pointer;
+  color: #000;
+}
+
+/************ FORMATAÇÃO PADRÃO DOS BOTÕES ***********/
+.btn {
+  text-transform: capitalize;
+  width: max-content;
+  display: inline-flex;
+  background: #ffc300;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #001d3d;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffa500;
+}
+
+/******* FORMATO IMAGENS ********/
+img {
+  width: auto;
+  height: auto;
+}
+
+/****** CENTRALIZA O CONTEUDO *********/
+.site {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/******************** FIM FORMATAÇÕES PADRÕES ************************/
+
+.logo {
+  margin: 14px 0;
+  width: 450px;
+  height: 120px;
+  background: url(../img/logo/logoFitness.svg) no-repeat;
+  text-indent: -9999px;
+}
+
+.areaAluno {
+  margin-left: 5px;
+  margin-top: 5px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #001d3d;
+  font-size: 1.5em;
+  letter-spacing: 1.5px;
+}
+
+.matricula {
+  color: #fff;
+  display: block;
+}
+
+/*********** INICIO MENU REVISADO ************/
+
+.menu > div {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1a1a1a;
+}
+
+.navegacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navegacao ul {
+  display: flex;
+}
+
+.navegacao ul li {
+  margin: 0 5px;
+}
+
+.navegacao ul li a {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 5px 10px;
+  font-size: 2em;
+  color: #ffc300;
+  border: #1a1a1a solid 1px;
+}
+
+.navegacao ul li a:hover {
+  border: #ffc300 solid 1px;
+}
+
+#burger {
+  text-align: center;
+  padding: 10px;
+  color: #ffc300;
+}
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 3em;
+  /* Define the transition for transforming the SVG */
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: #ffc300;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  /* Define the transition for transforming the Stroke */
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+.menuFixo {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 6;
+  animation: fadeIn ease-in-out 1s;
+}
+
+/********** FIM MENU ************/
+
+.banner {
+  width: 100%;
+  border-top: #ffc300 solid 5px;
+  border-bottom: #ffc300 solid 3px;
+}
+
+/********** INICIO SOBRE REVISADO ************/
+
+.sobre {
+  background: linear-gradient(to bottom, #000, #000814);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.sobre div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sobre h2 {
+  text-transform: capitalize;
+  padding: 0 15px;
+  font-size: 3em;
+  color: #ffc300;
+}
+
+.sobre div img {
+  border-radius: 0px 10px 10px 0px;
+  margin: 10px 0px;
+  border-left: #ffc300 solid 5px;
+}
+
+.sobre div:nth-child(2) {
+  width: 800px;
+  background: #202020;
+  border-left: #ffc300 solid 10px;
+  border-radius: 10px 0px 0px 0px;
+  padding: 10px;
+  margin-left: -200px;
+}
+
+.sobre p {
+  font-size: 2.5em;
+  color: #ffffff;
+  padding: 20px 15px;
+  text-align: justify;
+  line-height: normal;
+}
+
+.sobre a {
+  font-size: 2em;
+  align-self: flex-end;
+}
+
+/********** PAGINA SOBRE ************/
+
+.tituloSobreBanner {
+  background: black;
+  position: absolute;
+  top: 70%;
+  left: 1%;
+  padding: 60px 100px;
+  border-radius: 5px 10px 5px 5px;
+  box-shadow: 6px -10px 20px #ffc300;
+  color: #ffffff;
+  font-size: 3.5em;
+  border-right: #ffc300 solid 5px;
+  text-transform: capitalize;
+}
+
+.sobreMelhor {
+  background: linear-gradient(to bottom, #000814, #001d3d);
+  display: flex;
+  padding: 40px 40px 0 40px;
+  align-items: center;
+}
+
+.sobreMelhor > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.sobreMelhor > div:nth-last-child(1) {
+  margin: 0 20px;
+  justify-content: space-around;
+  background: #1a1a1a;
+  border: #ffc300 solid 3px;
+  border-radius: 20px;
+}
+
+.sobreMelhor img {
+  width: max-content;
+  filter: drop-shadow(10px -7px 10px #ffc300);
+}
+
+.sobreMelhor h2 {
+  text-transform: uppercase;
+  font-size: 3.5em;
+  color: #ffc300;
+  text-align: center;
+  padding: 10px;
+}
+
+.sobreMelhor h3 {
+  text-transform: capitalize;
+  font-size: 3em;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+}
+
+.sobreMelhor p {
+  font-size: 2.5em;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.sobreMelhor section {
+  padding: 20px;
+}
+
+.sobreMelhor section div {
+  align-items: center;
+  justify-content: center;
+}
+
+.mvv {
+  padding: 20px;
+  background: linear-gradient(to bottom, #001d3d, #003566);
+}
+
+.mvv h2 {
+  background: #ffc300;
+  text-transform: uppercase;
+  font-size: 3.5em;
+  color: #000;
+  padding: 10px;
+  width: 320px;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  border: #000814 solid 3px;
+}
+
+.mvv div > div {
+  padding-bottom: 40px;
+}
+
+.mvv p {
+  background: #000814;
+  font-size: 2.5em;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 0 10px 10px 10px;
+}
+
+/********** FIM SOBRE ************/
+
+/********** MODALIDADES REVISADO ***********/
+.modalidade {
+  text-transform: uppercase;
+  padding-bottom: 40px;
+  background: linear-gradient(to bottom, #000814, #003566);
+}
+
+.boxmodalidade {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+  flex-wrap: wrap; /* Para que o conteúdo seja responsivo */
+}
+
+.boxmodalidade > div {
+  min-width: 225px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #1a1a1a;
+  border: #ffc300 solid 5px;
+  border-radius: 50px;
+  margin: 15px 25px;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.boxmodalidade img {
+  width: 100%;
+  height: auto;
+  border-radius: 45px 45px 0 0;
+  border-bottom: #ffffff solid 1px;
+}
+
+.boxmodalidade p {
+  font-size: 2.5em; /* Ajuste de tamanho de fonte para melhor legibilidade */
+  color: #ffffff;
+  padding: 20px 10px;
+  text-align: center;
+  line-height: normal;
+}
+
+.boxmodalidade h3 {
+  font-size: 3em; /* Ajuste de tamanho de fonte para melhor legibilidade */
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.btn-mod {
+  margin-bottom: 10px;
+  font-size: 2em;
+  font-weight: 300;
+}
+/********** FIM MODALIDADES REVISADO ***********/
+
+/*********** CONTEUDO BLOG REVISADO *************/
+
+.blog {
+  background: linear-gradient(to bottom, #003566, #001d3d);
+  height: 500px;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog h3 {
+  padding: 20px;
+  color: #ffee29;
+  font-size: 2.7em;
+}
+
+.blog section {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.blog section > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 400px;
+  margin: 10px;
+  height: auto;
+}
+
+.blog section div div {
+  display: none;
+  position: absolute;
+  border-radius: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(0, 29, 61, 0.5);
+  width: 400px;
+  height: 350px;
+}
+
+.blog img {
+  width: 400px;
+  height: 350px;
+  border-radius: 20px;
+  border: #ffc300 solid 3px;
+}
+
+.blog p {
+  font-size: 2.2em;
+  padding: 15px;
+  width: 90%;
+  color: #ffffff;
+}
+
+/************** PAGINA BLOG REVISADA ***************/
+
+.conteudoBlog {
+  flex-direction: column;
+  background: #001d3d;
+  padding: 40px 0;
+  display: flex;
+}
+
+.conteudoBlog div {
+  display: flex;
+}
+
+.conteudoBlog > h1 {
+  background: #ffc300;
+  padding: 5px 20px;
+  font-size: 3em;
+  text-align: center;
+  width: max-content;
+  border: #000814 solid 3px;
+  border-radius: 7px 5px;
+  margin: 15px auto;
+}
+
+.conteudoBlog h5 {
+  margin: 0 auto;
+  font-size: 2em;
+  color: #ffc300;
+  padding: 10px;
+}
+
+.conteudoBlog section.postagem {
+  width: 100%;
+}
+
+.postagem {
+  flex-direction: column;
+}
+
+.postagem > div {
+  flex-wrap: wrap;
+  padding: 20px 0;
+  justify-content: space-around;
+}
+
+.postagem > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 320px;
+  margin: 10px;
+  border-radius: 5px;
+  background: #003566;
+  border: #000814 solid 2px;
+}
+
+.postagem div div div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.postagem h2 {
+  font-size: 2em;
+  color: #ffc300;
+  text-align: center;
+  padding: 10px;
+}
+
+.postagem p {
+  font-size: 2em;
+  color: #ffffff;
+  text-align: justify;
+  padding: 10px;
+}
+
+.postagem h3,
+.postagem h5,
+.postagem h4 {
+  color: #ffffff;
+  padding: 10px;
+}
+
+.postagem h3 {
+  font-size: 1.8em;
+}
+
+.postagem h5,
+.postagem h4,
+.postagem span {
+  font-size: 1.5em;
+}
+
+.postagem h4,
+.postagem span {
+  vertical-align: middle;
+}
+
+.newslatter div {
+  width: 350px;
+  background: #003566;
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+  align-items: center;
+  border: #000814 solid 3px;
+  border-radius: 5px;
+}
+
+.newslatter h2 {
+  font-size: 2.5em;
+  color: #ffc300;
+  text-align: center;
+  padding: 15px;
+}
+
+.newslatter p,
+.newslatter li {
+  font-size: 2em;
+  color: #ffffff;
+  text-align: justify;
+  padding: 10px;
+}
+.newslatter img,
+.postagem img {
+  width: 100%;
+}
+.newslatter input,
+.newslatter textarea,
+.newslatter button {
+  display: flex;
+  border-radius: 10px;
+  margin: 2% auto;
+  width: 90%;
+  padding: 2%;
+  background: #ffc300;
+  color: #ffffff;
+  font-size: 1.8em;
+  border: #ffc300 solid 1px;
+}
+
+.newslatter input[type="submit"],
+.newslatter button {
+  justify-content: center;
+  width: auto;
+  border-radius: 10px 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newslatter input[type="submit"]:hover,
+.newslatter button:hover {
+  background-color: #ffa500;
+}
+
+/************ FIM CONTEUDO BLOG *************/
+
+/************ INICIO RODAPE REVISADO ***********/
+
+.rodape {
+  background: #000814;
+  color: #ffffff;
+  border-top: solid 1px #ffc300;
+  box-shadow: 0px -4px 15px #ffc300;
+  padding: 40px 0;
+}
+
+.rodape div > div {
+  justify-content: center;
+  text-align: center;
+}
+
+.social div {
+  display: flex;
+}
+.social div a {
+  margin: 10px 20px;
+}
+
+.rodape section {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.rodape nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 40px;
+  flex-direction: column;
+}
+
+.rodape nav ul li {
+  font-size: 2em;
+  padding: 5px 0;
+}
+
+.rodape h2 {
+  padding: 10px 0;
+  font-size: 2.5em;
+}
+
+.rodape p {
+  font-size: 2em;
+  color: #ffffff;
+  margin: 15px 0;
+}
+
+.rodape a {
+  color: #ffffff;
+  font-size: 1em;
+}
+
+.rodape div > a {
+  color: #ffffff;
+  font-size: 2em;
+}
+
+.rodape h5 {
+  font-size: 2em;
+  text-align: center;
+}
+
+hr {
+  margin: 20px 0 0 0;
+  padding: 10px 0;
+  width: 100%;
+  height: 1px;
+  border: 0px;
+  border-top: 1px solid #ffc300;
+}
+
+/************** FIM RODAPÉ *************/
+
+/*********** INICIO PLANOS REVISADO ***********/
+
+.planos {
+  background-color: #001d3d;
+  padding: 20px 0;
+}
+
+.planos div {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 70px;
+}
+
+.planos section {
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.planos div section:nth-child(2) {
+  transform: scale(1.1);
+}
+
+.planos section h2 {
+  font-size: 2.5em;
+}
+
+.planos section h3 {
+  margin: 10px;
+  color: #ffc300;
+  font-size: 6em;
+  margin-top: 10px;
+}
+
+.planos section li {
+  margin: 5px;
+  color: #1e1e1e;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.recomendado {
+  position: relative;
+  letter-spacing: 1px;
+  border: #003566 solid 1px;
+  top: -35px;
+  background-color: #ffc300;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: -30px;
+}
+
+.planos section span {
+  margin-right: 2px;
+  vertical-align: text-bottom;
+  color: #00ff00;
+}
+
+.planosP {
+  background-color: #001d3d;
+  padding: 40px;
+}
+
+.planosP div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.planosP section {
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.planosP div section:nth-child(2) {
+  transform: scale(1.1);
+}
+
+.planosP section h2 {
+  font-size: 2.5em;
+}
+
+.planosP section h3 {
+  margin: 10px;
+  color: #ffc300;
+  font-size: 6em;
+  margin-top: 10px;
+}
+
+.planosP section li {
+  margin: 5px;
+  color: #1e1e1e;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.recomendado {
+  position: relative;
+  letter-spacing: 1px;
+  border: #003566 solid 1px;
+  top: -35px;
+  background-color: #ffc300;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: -30px;
+}
+
+.planosP section span {
+  margin-right: 2px;
+  vertical-align: text-bottom;
+  color: #00ff00;
+}
+
+/****** FIM PLANOS *************/
+
+/******COMENTARIOS REVISADO**********/
+.comentarios {
+  background-color: #001d3d;
+  padding: 40px 0;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.comment {
+  width: 300px;
+  border-radius: 25px;
+  padding: 20px 0;
+  text-align: center;
+  background: #003566;
+  margin: 20px;
+}
+
+.comment img {
+  margin: 0 auto;
+  border-radius: 25px;
+  width: 250px; /* tamanho ajustável */
+  height: 250px; /* tamanho ajustável */
+}
+
+.comment h2 {
+  font-size: 2.5em;
+  color: #ffc300;
+  margin-bottom: 5px;
+}
+
+.comment p {
+  color: #fff;
+  padding: 0 30px;
+  font-size: 2em;
+  line-height: 1.5;
+}
+
+.comment span {
+  color: #ffc300;
+  font-size: 2em;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/*######## Início CONTATO #######*/
+.form {
+  background: #001d3d;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.form h2 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form h3 {
+  width: 310px;
+  font-size: 3em;
+  color: #ffffff;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.form h5 {
+  margin: 0 auto;
+  font-size: 2em;
+  color: #ffc300;
+  padding: 10px;
+}
+
+.form a {
+  display: flex;
+  font-size: 3em;
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.form p {
+  font-size: 3em;
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.form > div > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form > div > div > div {
+  width: 45%;
+}
+.form form {
+  width: 45%;
+}
+
+.form .form {
+  display: flex;
+  justify-content: space-around;
+  margin: 5%;
+}
+
+.form .form > div {
+  width: 40%;
+}
+
+.form .form > div div {
+  margin-bottom: 5%;
+}
+
+.form input,
+.form textarea,
+button {
+  border-radius: 10px;
+  margin: 2% 0;
+  width: 95%;
+  padding: 2%;
+  background: #ffc300;
+  color: #ffffff;
+  font-size: 1.8em;
+  border: #ffc300 solid 1px;
+}
+
+.form input,
+.form textarea,
+button {
+  display: flex;
+  border-radius: 10px;
+  margin: 2% auto;
+  width: 90%;
+  padding: 2%;
+  background: #ffc300;
+  color: #ffffff;
+  font-size: 1.8em;
+  border: #ffc300 solid 1px;
+}
+
+.form input[type="submit"],
+.form button {
+  justify-content: center;
+  width: auto;
+  border-radius: 10px 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form input[type="submit"]:hover,
+.form button:hover {
+  background-color: #ffa500;
+}
+
+.programasFit {
+    box-shadow: 0 -4px 15px #ffc300;
+    border-radius: 20px;
+    position: absolute;
+    top: 560px;
+    bottom: 0;
+    left: -900px;
+    right: 0px;
+    width: 400px;
+    height: 125px;
+    margin: 0 auto;
+    padding: 50px;
+    background: #ffffff;
+    justify-content: space-between;
+}
+
+.programasFit > div,
+.programasFit > div > div {
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+}
+
+.programasFit h3 {
+  padding: 5px 20px;
+  font-size: 3em;
+  text-align: center;
+  width: max-content;
+  border-radius: 7px 5px;
+  margin: 0 auto;
+}
+
+.programasFit span {
+  vertical-align: middle;
+}
+
+.programasFit > div:nth-child(2) div:nth-child(1) {
+  flex-direction: column;
+}
+
+.programasFit > div:nth-child(2) div:nth-child(1) div {
+  display: flex;
+}
+
+.programasFit p {
+  color: #000;
+  font-size: 1.5em;
+}
+
+.programasFit h6 {
+  font-size: 1.5em;
+  align-self: flex-end;
+}
+
+.programasFit h4 {
+  font-size: 3em;
+  align-self: flex-end;
+}
+
+.vantagemFit {
+  padding: 40px 1px 1px 1px;
+  background: linear-gradient(to bottom, #003566, #001d3d);
+}
+
+.vantagemFit > div {
+  display: flex;
+}
+
+.diferencialEsquerda,
+.diferencialDireita {
+  width: 50%;
+  flex-direction: column;
+}
+
+.diferencialEsquerda div {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 20px;
+  flex-wrap: wrap;
+}
+.diferencialEsquerda div div {
+  text-align: center;
+  flex-direction: column;
+}
+
+.diferencialEsquerda h2,
+.diferencialDireita h2 {
+  color: #ffc300;
+  font-size: 3em;
+}
+
+.diferencialEsquerda h3,
+.diferencialDireita h3 {
+  color: #ffffff;
+  font-size: 2.5em;
+}
+
+.diferencialDireita h3,
+.diferencialDireita h2 {
+  text-align: end;
+}
+
+.diferencialEsquerda h4 {
+  padding: 5px;
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+.diferencialEsquerda img {
+  max-width: 150px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+}
+
+.fitfusion {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  align-items: end;
+  padding: 20px;
+}
+
+.fitfusion img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.corpoModalidade {
+  display: flex;
+  background: linear-gradient(to bottom, #003566, #000814);
+  padding: 40px 0px;
+}
+
+.corpoModalidade aside {
+  width: 50%;
+  padding: 40px 0px 0px 70px;
+}
+
+.modalidadesHover > li {
+  transition: 0.35s;
+  cursor: pointer;
+}
+
+.modalidadesHover:hover > li:not(:hover) {
+  opacity: 0.5;
+  transform: scale(1);
+}
+
+.sidebar ul li {
+  background: #ffc300;
+  border: 3px solid black;
+  margin: 5px auto;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.sidebar ul li a {
+  font-size: 3em;
+  color: black;
+}
+
+.fotoModalidade {
+  transition: 0.35s;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fotoModalidade ul,
+.fotoModalidade li {
+  margin: 10px;
+}
+
+.fotoModalidade img {
+  border: 1px solid #000;
+}
+
+.fotoModalidade img:hover {
+  border: 1px solid #ffc300;
+}

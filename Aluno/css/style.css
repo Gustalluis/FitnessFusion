@@ -1,0 +1,1112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/********* CONTEUDO DO TOPO ****************/
+
+:root {
+  background: #f3f2f7;
+}
+
+.btnCad {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+.btnAtua {
+  display: inline-block;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #003566;
+  z-index: 1000;
+}
+
+.topoDash {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.topoDash .logo {
+  width: 370px;
+}
+
+.perfil div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.perfil {
+  display: flex;
+  background: #003566;
+  border-radius: 7px 5px;
+  margin: 0 20px;
+  padding: 20px;
+  text-align: end;
+}
+
+.perfil h2 {
+  font-size: 1.5em;
+  margin: 1px;
+}
+
+.perfil h3 {
+  font-size: 1.3em;
+  margin: 1px;
+}
+
+.perfil img {
+  width: 70px;
+  height: 70px;
+  border-radius: 30px;
+  margin: 0 5px;
+}
+
+.topoDash section {
+  display: flex;
+  justify-content: space-around;
+  min-width: 600px;
+}
+
+.topoDash hr {
+  width: 3px;
+  height: 50px;
+  background-color: #ffffff;
+  margin: auto 0;
+}
+
+/* BARRA DE PESQUISA */
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  width: 600px;
+}
+
+.input {
+  width: 100%;
+  height: 50px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: 0.3s ease;
+}
+
+.input::placeholder {
+  color: #9e9ea7;
+  font-size: 1.3em;
+}
+
+.input:focus,
+input:hover {
+  outline: none;
+  border-color: rgba(255, 165, 0, 0.6);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  fill: #9e9ea7;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* BARRA DE PESQUISA */
+
+/* BOTÃO NOTIFICAÇÃO */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border: none;
+  background: #5e41de33;
+  margin: auto 20px;
+}
+
+.bell {
+  width: 18px;
+}
+
+.bell path {
+  fill: white;
+}
+
+.button:hover {
+  background-color: rgb(56, 56, 56);
+}
+
+.button:hover .bell {
+  animation: bellRing 0.9s both;
+}
+
+/* ANIMAÇÃO NOTIFICAÇÃO */
+@keyframes bellRing {
+  0%,
+  100% {
+    transform-origin: top;
+  }
+
+  15% {
+    transform: rotateZ(10deg);
+  }
+
+  30% {
+    transform: rotateZ(-10deg);
+  }
+
+  45% {
+    transform: rotateZ(5deg);
+  }
+
+  60% {
+    transform: rotateZ(-5deg);
+  }
+
+  75% {
+    transform: rotateZ(2deg);
+  }
+}
+
+.button:active {
+  transform: scale(0.8);
+}
+
+/* FIM BOTÃO NOTIFICAÇÃO */
+
+/* BOTÃO CONFIG */
+.lable {
+  line-height: 20px;
+  font-size: 17px;
+  color: #5d41de;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.button:hover {
+  background: #5e41de4d;
+}
+
+.button:hover .svg-icon {
+  animation: spin 2s linear infinite;
+}
+
+/* ANIMAÇÃO CONFIG */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/********* CONTEUDO DO DASHBOARD *********/
+.dashboard {
+  display: flex;
+}
+
+header,
+aside {
+  background: #001124;
+}
+
+aside {
+  position: fixed;
+  top: 165px;
+  left: 0;
+  width: 350px;
+  height: calc(100% - 100px);
+  z-index: 1000;
+}
+
+.sidebarDash-menu a {
+  padding-left: 3rem;
+  display: block;
+  color: #fff;
+  font-size: 2em;
+  text-decoration: none;
+  margin: 15px 0;
+  transition: color 0.3s ease-in-out, 0.3s ease-in-out,
+    border-radius 0.3s ease-in-out;
+  font-size: 2.5em;
+}
+
+.sidebarDash-menu a:hover {
+  background: #fff;
+  padding: 15px;
+  color: #003566;
+  border-radius: 30px 0px 0px 30px;
+}
+
+main {
+  flex-grow: 1;
+  background: #f3f2f7;
+  padding: 20px;
+  margin-left: 350px;
+  margin-top: 168px;
+  height: 750px;
+  overflow-y: auto;
+}
+
+.sidebarDash-menu ul {
+  margin-top: 40px;
+}
+
+.sidebarDash-menu li {
+  margin-bottom: 25px;
+  padding-left: 20px;
+}
+
+.dadoPrimario,
+.dadoPrimario div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dadoPrimario > div {
+  background: rgba(0, 29, 61, 0.3);
+}
+
+.dadoPrimario div {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.dadoPrimario div div {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dadoPrimario img {
+  width: 70px;
+  height: 70px;
+}
+
+.dadoPrimario h2 {
+  font-size: 2.5em;
+}
+
+.dadoPrimario h3 {
+  font-size: 1.5em;
+  text-transform: capitalize;
+}
+
+.dadoPrimario small {
+  color: #4d4c4c;
+  text-align: end;
+  font-size: 1.2em;
+}
+
+.cliente {
+  margin: 20px 0;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 65% auto;
+}
+
+.cliente h3 {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+/* Estilo para o título dentro da tabela */
+.tabela h3 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 0; /* Remove a margem padrão para garantir alinhamento correto */
+}
+
+/* Estilo para a tabela */
+.tabela {
+  width: 100%;
+  border-collapse: collapse; /* Remove os espaços entre as células da tabela */
+  height: 560px; /* Altura fixa para a rolagem */
+  overflow-x: auto; /* Adiciona rolagem horizontal */
+  overflow-y: auto; /* Adiciona rolagem vertical */
+}
+
+/* Estilo para a tabela dentro do contêiner */
+.tabela table {
+  width: 100%; /* Garante que a tabela ocupe 100% da largura do contêiner */
+  border-collapse: collapse; /* Remove os espaços entre as células da tabela */
+}
+
+/* Estilo para as imagens dentro da tabela */
+.tabela td img {
+  width: 100px; /* Define a largura das imagens */
+  height: 100px; /* Mantém a proporção da imagem */
+}
+
+/* Estilo para a tabela */
+.tabelaDash {
+  width: 100%;
+  border-collapse: collapse; /* Remove os espaços entre as células da tabela */
+  height: 425px; /* Altura fixa para a rolagem */
+  overflow-x: auto; /* Adiciona rolagem horizontal */
+  overflow-y: auto; /* Adiciona rolagem vertical */
+}
+
+/* Estilo para a tabela dentro do contêiner */
+.tabelaDash table {
+  width: 100%; /* Garante que a tabela ocupe 100% da largura do contêiner */
+  border-collapse: collapse; /* Remove os espaços entre as células da tabela */
+}
+
+/* Estilo para as imagens dentro da tabela */
+.tabelaDash td img {
+  width: 100px; /* Define a largura das imagens */
+  height: 100px; /* Mantém a proporção da imagem */
+}
+/* Estilo para spans dentro da tabela */
+.tabela span {
+  font-size: 2em; /* Ajusta o tamanho da fonte */
+}
+
+.grafico {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grafico div {
+  width: calc(50% - 10px);
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+/* Daqui pra baixo revisar */
+
+thead tr {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+thead td,
+thead th {
+  font-weight: 700;
+  font-size: 2em;
+}
+
+td {
+  padding: 5px;
+  font-size: 1.2rem;
+  color: #222;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.card-header h3 {
+  font-size: 3em;
+  margin-bottom: 0rem;
+}
+.form-label {
+  font-size: 2em;
+}
+
+.mt-5 > h2 {
+  font-size: 3em;
+}
+
+.info img {
+  width: 70px;
+  height: 70px;
+}
+/****** DAQUI PRA CIMA PRECISA MESMO PRA FUNCIONAR *******/
+/****** DAQUI PRA BAIXO É A PAGINA CLIENTE *******/
+
+.customer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.7rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.info img {
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.info > h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.info small {
+  font-weight: 600;
+  color: var(--text-grey);
+}
+
+.contact span {
+  font-size: 1.8rem;
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: var(--main-color);
+}
+
+/* PAGINA FUNCIONARIO */
+.filtro-funcionario {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.filtro-funcionario ul {
+  display: flex;
+  list-style: none; /* Remove os marcadores da lista */
+  padding: 0;
+  margin: 0;
+}
+
+.filtro-funcionario li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  text-align: center;
+}
+
+.filtro-funcionario a {
+  margin: 10px;
+  padding: 5px 20px; /* Reduz o padding para diminuir o tamanho dos botões */
+  border: #001124 solid 1px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #001124;
+  font-size: 1rem; /* Reduz o tamanho da fonte */
+}
+
+.filtro-funcionario a:hover {
+  background: rgba(213, 215, 218, 0.9);
+}
+
+#filterButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  width: 30px;
+  padding: 2px;
+  font-size: 0.9rem;
+  color: black;
+  border-radius: 10px;
+  border: #001124 solid 1px;
+  cursor: pointer;
+}
+
+#filterForm button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  width: 50px;
+  padding: 2px;
+  font-size: 0.9rem;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#filterMenu {
+  position: absolute;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  z-index: 100;
+}
+
+.hidden {
+  display: none;
+}
+
+#filterForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#filterForm label {
+  margin-bottom: 5px;
+}
+
+.checkbox input {
+  padding: 20px;
+  background: red;
+  width: 30px;
+  position: relative;
+  right: 20px;
+}
+
+/* FORMULARIO CADASTRAR ALUNO */
+
+.container {
+  background: #f3f2f7;
+  position: absolute;
+  right: 120px;
+  top: 220px;
+}
+
+.logo-form img {
+  position: absolute;
+  left: 100%;
+  bottom: -250px;
+}
+
+.brow {
+  flex-wrap: nowrap;
+  flex-shrink: 1;
+}
+.brow :nth-child(1) div {
+  width: max-content;
+}
+
+.bimg-fluid {
+  max-width: 100%;
+  margin: 0;
+  border: 0;
+}
+
+/* Estilos específicos para as calculadoras */
+.calculadoras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.cont {
+  flex: 1 1 30%; /* Ajusta a largura das calculadoras, ocupa 30% do container pai */
+  margin: 10px;
+  max-width: 300px; /* Define uma largura máxima */
+}
+
+.calculator {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.calculator label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.calculator input,
+.calculator select,
+.calculator button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.calculator button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.calculator button:hover {
+  background-color: #0056b3;
+}
+
+.calculator #resultado-imc,
+.calculator #resultado-calorias,
+.calculator #resultado-rm {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+
+
+/* inicio aba do aluno*/
+.container-aluno {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para perfil do aluno */
+.perfil-aluno {
+  margin-bottom: 30px;
+}
+
+.info-perfil {
+  padding: 20px;
+  background: #e6e6e6;
+  border-radius: 8px;
+}
+
+.info-perfil h2 {
+  margin-bottom: 10px;
+}
+
+.info-perfil p {
+  margin-bottom: 8px;
+}
+
+/* Estilo para agendamentos de aulas */
+.agenda {
+  margin-bottom: 30px;
+}
+
+.agenda table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.agenda th, .agenda td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.agenda th {
+  background-color: #f4f4f4;
+}
+
+/* Estilo para planos de treino */
+.planos-treino {
+  margin-bottom: 30px;
+}
+
+.planos-treino .plano {
+  padding: 20px;
+  background: #e6e6e6;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.planos-treino h3 {
+  margin-bottom: 10px;
+}
+
+.planos-treino ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.planos-treino li {
+  margin-bottom: 5px;
+}
+
+/* Estilo para notificações */
+.notificacoes {
+  margin-bottom: 30px;
+}
+
+.notificacoes ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.notificacoes li {
+  background: #e6e6e6;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para conteúdo educativo */
+.conteudo-educativo {
+  margin-bottom: 30px;
+}
+
+.conteudo-educativo .artigo {
+  padding: 20px;
+  background: #e6e6e6;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.conteudo-educativo h3 {
+  margin-bottom: 10px;
+}
+
+.conteudo-educativo p {
+  line-height: 1.6;
+}
+
+/* Estilo para gráficos e calendário */
+#graficoDesempenho, #calendar {
+  margin-bottom: 30px;
+}
+
+canvas {
+  max-width: 100%;
+}
+
+.fc {
+  max-width: 100%;
+}
+
+
+/* FIM PAGINA FUNCIONARIO*/
+
+/* 
+:root {
+  --main-color: #001d3d;
+  --color-dark: #1d2231;
+  --text-grey: #8390a2;
+  font-size: 12px;
+}
+
+.sidebarDash-menu {
+  margin-top: 1rem;
+}
+
+.sidebarDash-menu ul {
+  margin-top: 40px;
+}
+
+.sidebarDash-menu li {
+  width: 100%;
+  margin-bottom: 1.7rem;
+  padding-left: 1rem;
+}
+
+.sidebar-menu a {
+  padding-left: 1rem;
+  display: block;
+  color: #fff;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.sidebar-menu a.active {
+  background: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--main-color);
+  border-radius: 30px 0px 0px 30px;
+}
+
+.sidebar-menu a span:first-child {
+  font-size: 1.5rem;
+  padding-right: 1rem;
+}
+
+#nav-toggle:checked + .sidebar {
+  width: 70px;
+}
+
+#nav-toggle:checked + .sidebar .sidebar-brand, 
+#nav-toggle:checked + .sidebar li {
+  padding-left: 1rem;
+  text-align: center;
+}
+
+#nav-toggle:checked + .sidebar li a {
+  padding-left: 0rem;
+}
+
+#nav-toggle:checked + .sidebar .sidebar-brand h2 span:last-child,
+#nav-toggle:checked + .sidebar li a span:last-child {
+  display: none;
+}
+
+#nav-toggle:checked ~ .main-content {
+  margin-left: 70px;
+}
+
+#nav-toggle:checked ~ .main-content header {
+  width: calc(100% - 70px);
+  left: 70px;
+}
+
+.main-content {
+  transition: margin-left 300ms;
+  margin-left: 345px;
+}
+
+ header {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  left: 345px;
+  width: calc(100% - 345px);
+  top: 0;
+  z-index: 100;
+  transition: left 300ms;
+} 
+
+.black {
+  background-color: rgb(#222, #222, #222);
+  transition: all 0.25s ease-in-out;
+}
+
+.mudar-cor > button {
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0 10px;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+header h2 {
+  color: #222;
+}
+
+header label span {
+  font-size: 1.7rem;
+  padding-right: 1rem;
+}
+
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  width: 30%;
+}
+
+.input {
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  width: 100%;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  color: #0d0c22;
+  box-shadow: 0 0 5px #c1d9bf, 0 0 0 1px #f5f5f5eb;
+  transition: 0.3s ease;
+}
+
+.input::placeholder {
+  color: #777;
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  fill: #777;
+  width: 1rem;
+  height: 1rem;
+}
+
+.user-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.user-wrapper > img {
+  border-radius: 50%;
+  margin-right: 1rem;
+  width: 50px;
+  height: 50px;
+}
+
+.user-wrapper small {
+  display: inline-block;
+  color: var(--text-grey);
+}
+
+main {
+  margin-top: 85px;
+  padding: 2rem 1.5rem;
+  background: #f1f5f9;
+  min-height: calc(100vh - 90px);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin-top: 1rem;
+}
+
+.card-single {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 2px;
+}
+
+.card-single div:last-child span {
+  font-size: 3rem;
+  color: var(--main-color);
+}
+
+.card-single div:first-child span {
+  color: var(--text-grey);
+}
+
+.card-single:last-child {
+  background: var(--main-color);
+}
+
+.card-single:last-child {
+  background: var(--main-color);
+}
+
+.card-single:last-child h2,
+.card-single:last-child div:first-child span,
+.card-single:last-child div:last-child span {
+  color: #fff;
+}
+
+.recent-grid {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 65% auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 5px;
+}
+
+.card-header {
+  padding: 1rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.card-header button {
+  background: var(--main-color);
+  border: 1px solid #f0f0f0;
+  border-radius: 20px 20px;
+  width: 20%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+thead tr {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+thead td {
+  font-weight: 700;
+}
+
+td {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+td .status {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+tr td:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.status.purple {
+  background: rebeccapurple;
+}
+
+.status.pink {
+  background: deeppink;
+}
+
+.status.orange {
+  background: orangered;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.customer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.7rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.info img {
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.info > h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.info small {
+  font-weight: 600;
+  color: var(--text-grey);
+}
+
+.contact span {
+  font-size: 1.8rem;
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: var(--main-color);
+}  */

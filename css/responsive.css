@@ -1,0 +1,523 @@
+@media (max-width: 1780px) {
+  .sobreMelhor img {
+    max-width: 900px;
+  }
+  .fotoModalidade img {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 1620px) {
+  .planos div {
+    padding-top: 280px;
+  }
+  .titulo {
+    margin: 0 auto;
+  }
+  .sobre div:nth-child(2) {
+    width: 90%;
+    margin-left: -200px;
+  }
+  .sobre div img {
+    max-width: 100%;
+  }
+  .logo {
+    width: 340px;
+  }
+}
+@media (max-width: 1440px) {
+  .navegacao .btn{
+    display: none;
+  }
+  .sobreMelhor img {
+    max-width: 700px;
+  }
+  .fotoModalidade img {
+    max-width: 400px;
+  }
+}
+@media (max-width: 1300px) {
+  .form > div > div {
+    justify-content: space-around;
+  }
+  .tituloSobreBanner,
+  .programasFit {
+    display: none;
+  }
+  .sobreMelhor h2 {
+    font-size: 3em;
+  }
+  .sobreMelhor h3 {
+    font-size: 2.5em;
+  }
+  .sobreMelhor p {
+    font-size: 2em;
+  }
+  .menu > div {
+    align-items: center;
+    flex-direction: column;
+  }
+  .navegacao {
+    margin-bottom: 10px;
+  }
+  .sobre {
+    flex-direction: column;
+  }
+  .sobre div:nth-child(2) {
+    margin-left: 0;
+    margin-top: -350px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .programasFit {
+    top: 300px;
+  }
+  .form > div > div > div {
+    width: 50%;
+  }
+  .sobreMelhor {
+    flex-direction: column;
+  }
+  .corpoModalidade {
+    padding: 0;
+    flex-direction: column;
+  }
+  .corpoModalidade aside {
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0px 0px 0px;
+  }
+}
+@media (max-width: 1100px) {
+  .diferencialEsquerda h3,
+  .diferencialDireita h3,
+  .diferencialEsquerda h2,
+  .diferencialDireita h2 {
+    padding: 0 20px;
+  }
+  .conteudoBlog div {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 920px) {
+  .planosP {
+    padding: 40px 0;
+  }
+  .planosP section {
+    justify-content: space-between;
+    margin: 10px;
+  }
+  .planosP div {
+    align-items: center;
+  }
+  .vantagemFit > div {
+    flex-direction: column-reverse;
+  }
+  .diferencialDireita,
+  .diferencialEsquerda {
+    width: 100%;
+  }
+  .form h2 {
+    font-size: 2.5em;
+    margin-bottom: 0;
+  }
+  .form h3,
+  .form a,
+  .form p {
+    font-size: 2.5em;
+  }
+  .sobre h2 {
+    font-size: 2.5em;
+  }
+  .sobre p {
+    font-size: 2em;
+  }
+  .navegacao ul li {
+    margin: 10px 5px;
+  }
+  .sobre div:nth-child(2) {
+    margin-top: -150px;
+  }
+  .blog img {
+    width: 350px;
+    height: auto;
+  }
+  .blog section > div {
+    position: relative;
+    width: 350px;
+    height: 300px;
+  }
+  .blog p {
+    font-size: 2em;
+    padding: 10px;
+    color: #ffffff;
+  }
+  .blog section div div {
+    display: block;
+    width: 350px;
+    height: 307px;
+  }
+  .blog h3 {
+    font-size: 2.2em;
+  }
+  .planos div {
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: 820px) {
+  pro .planosP {
+    padding: 0;
+  }
+  .planosP section {
+    margin: 40px 0px;
+  }
+  .planosP div {
+    flex-direction: column;
+  }
+  .form > div > div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form > div > div > div,
+  .form form {
+    width: 95%;
+  }
+  .planos div {
+    padding-top: 0;
+    margin-top: 160px;
+  }
+  .planos section {
+    margin: 10px;
+  }
+  .comentario img {
+    width: 250px;
+    height: 250px;
+  }
+  .planos {
+    padding-top: 80px;
+  }
+  .rodape nav {
+    padding: 20px;
+  }
+}
+
+@media not all and (max-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+  }
+  .menu > div {
+    flex-direction: row;
+  }
+  .navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    background: #000814f5;
+    height: 100%;
+    z-index: 1111111;
+    margin: 0;
+    top: 148px;
+    width: 40%;
+    right: -600px;
+    transition: right 0.5s ease-out;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .burger .navegacao {
+    overflow: hidden;
+    right: 0;
+  }
+  .navegacao ul {
+    flex-direction: column;
+    margin: 20px;
+  }
+  .navegacao ul li {
+    margin: 15px;
+  }
+  .navegacao ul li a {
+    border: #1a1a1a solid 0px;
+  }
+  .rodape nav {
+    padding: 20px 10px;
+  }
+  .banner {
+    display: none;
+  }
+}
+
+@media (max-width: 741px) {
+  .blog img {
+    width: 300px;
+    height: auto;
+  }
+  .blog section > div {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+  .blog p {
+    font-size: 1.6em;
+    padding: 10px;
+    color: #ffffff;
+  }
+  .blog section div div {
+    display: block;
+    width: 300px;
+    height: 263px;
+  }
+  .blog h3 {
+    font-size: 2em;
+  }
+  .comentario img {
+    width: 200px;
+    height: 200px;
+  }
+  .planos div,
+  .rodape section {
+    align-items: center;
+    flex-direction: column;
+  }
+  .planos section {
+    margin: 30px;
+  }
+  .rodape section {
+    text-align: center;
+  }
+}
+
+@media (max-width: 639px) {
+  .corpoModalidade aside {
+    width: 70%;
+  }
+  .sobreMelhor img {
+    max-width: 550px;
+  }
+  .planos div {
+    margin-top: 800px;
+  }
+  [vw] [vw-access-button] {
+    top: 60%;
+  }
+  .menuFixo {
+    display: none;
+  }
+  .modalidade {
+    padding: 0;
+  }
+  .boxmodalidade {
+    flex-direction: column;
+    align-items: center;
+  }
+  .boxmodalidade > div {
+    margin: 15px 5px;
+  }
+  .sobre div:nth-child(2) {
+    margin-top: -230px;
+  }
+  .sobre p {
+    font-size: 1.7em;
+  }
+  .sobre a {
+    font-size: 1.5em;
+  }
+  .sobre h2 {
+    font-size: 2.3em;
+  }
+  .planos section {
+    margin: 30px 0;
+  }
+  .comentarios {
+    padding: 0;
+  }
+  .blog img {
+    width: 350px;
+    height: auto;
+  }
+  .blog section > div {
+    position: relative;
+    width: 350px;
+    height: 300px;
+  }
+  .blog p {
+    font-size: 2em;
+    padding: 10px;
+    color: #ffffff;
+  }
+  .blog section div div {
+    display: block;
+    width: 350px;
+    height: 307px;
+  }
+  .blog h3 {
+    font-size: 2.2em;
+  }
+}
+@media (max-width: 550px) {
+  .sobreMelhor img {
+    max-width: 450px;
+  }
+}
+@media (max-width: 520px) {
+  .navegacao {
+    width: 60%;
+  }
+  .logo {
+    width: 150px;
+    background: url(../img/logo/logoFitnessvazio.svg) no-repeat;
+  }
+  .sobre div:nth-child(2) {
+    margin-top: -250px;
+  }
+  .planos div {
+    margin-top: 880px;
+  }
+  .blog section > div {
+    margin: 20px 0;
+  }
+  .blog h3 {
+    font-size: 2.2em;
+  }
+}
+
+@media (max-width: 470px) {
+  .form h3,
+  .form a,
+  .form p {
+    font-size: 2em;
+  }
+  .fotoModalidade img {
+    max-width: 350px;
+  }
+  .sobreMelhor {
+    padding: 0;
+  }
+  .titulo {
+    font-size: 2.3em;
+  }
+  .sobre div:nth-child(2) {
+    margin-top: -100px;
+  }
+  .sobreMelhor img {
+    max-width: 350px;
+  }
+  .mvv h2 {
+    font-size: 3em;
+    width: auto;
+  }
+  .mvv p {
+    letter-spacing: 0.05em;
+    font-size: 2em;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .postagem > div > div {
+    max-width: 290px;
+    margin: 10px 0;
+  }
+  .newslatter div {
+    margin: 0;
+    width: 290px;
+  }
+  .newslatter h2 {
+    font-size: 2em;
+  }
+  .newslatter p {
+    font-size: 1.7em;
+  }
+  .newslatter li {
+    font-size: 1.5em;
+  }
+  .newslatter img,
+  .postagem img {
+    max-width: 290px;
+  }
+
+  .form h3,
+  .form a,
+  .form p {
+    font-size: 1.8em;
+  }
+  .fotoModalidade img {
+    max-width: 300px;
+  }
+  .sobreMelhor img {
+    max-width: 320px;
+  }
+  .comment img {
+    width: 170px;
+    height: 170px;
+  }
+  .blog img {
+    width: 300px;
+    height: auto;
+  }
+  .blog section > div {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+  .blog p {
+    font-size: 1.6em;
+    padding: 10px;
+    color: #ffffff;
+  }
+  .blog section div div {
+    display: block;
+    width: 300px;
+    height: 263px;
+  }
+  .blog h3 {
+    font-size: 1.8em;
+  }
+  .planos section,
+  .planosP section {
+    max-width: 230px;
+  }
+  .planosP {
+    padding: 0;
+  }
+  .rodape nav ul li {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 320px) {
+  .navegacao {
+    width: 70%;
+  }
+  .rodape nav ul li {
+    font-size: 1.8em;
+  }
+  .planos section {
+    max-width: 230px;
+  }
+  .boxmodalidade p {
+    font-size: 2em;
+  }
+  .btn-mod {
+    font-size: 1.5em;
+  }
+  .boxmodalidade h3 {
+    font-size: 2.5em;
+  }
+  .comentario img {
+    width: 170px;
+    height: 170px;
+  }
+  .sobre div:nth-child(2) {
+    margin-top: -50px;
+  }
+}
