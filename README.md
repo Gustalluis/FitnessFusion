@@ -37,7 +37,7 @@ Este projeto nasce da refatoração completa de um sistema legado em PHP procedu
 
 1. **Clone o repositório:**
    ```bash
-   git clone git clone https://github.com/Gustalluis/FitnessFusion.git
+   git clone https://github.com/Gustalluis/FitnessFusion.git
    cd FitnessFusion
    ```
 
