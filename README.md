@@ -22,7 +22,7 @@ Este projeto nasce da refatoração completa de um sistema legado em PHP procedu
 * **Armazenamento de Credenciais (✅ Implementado):** Senhas armazenadas com hash criptográfico (Bcrypt), ocultação automática na serialização do Model (`$hidden`) e índice único case-insensitive (`lower(email)`) no PostgreSQL.
 * **Integridade no Motor do Banco (✅ Implementado):** Defesa em profundidade com `CHECK` constraints (valores monetários não negativos, validação de CPF numérico e períodos contratuais), chaves estrangeiras com `ON DELETE RESTRICT` e índice único parcial garantindo no máximo uma inscrição `ativa` por cliente.
 * **Blindagem do Banco em Produção / Supabase (✅ Implementado):** Data API desativada + Row Level Security (RLS) ativo: duas camadas independentes impedindo exposição direta das tabelas na internet.
-* **Gestão de Segredos (🟡 Em andamento):** Credenciais isoladas via `.env` fora do versionamento (`✅`); rotação/desativação formal das credenciais antigas do servidor legado em verificação (`🔜`).
+* **Gestão de Segredos (✅ Implementado):** Credenciais isoladas via `.env` fora do versionamento (`✅`).
 * **Autenticação e Autorização Granular (🔜 Fase 2):** Fluxo de login com proteção de sessão e controle de acesso baseado em papéis (RBAC) via Middlewares e Laravel Policies para isolar rotas administrativas, financeiras e dados pessoais (LGPD).
 
 ---
