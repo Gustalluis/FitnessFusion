@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Funcionario;
-use Illuminate\Http\Request;
 
 class FuncionarioController extends Controller
 {
@@ -11,7 +10,7 @@ class FuncionarioController extends Controller
     {
         return response()->json([
             'sucesso' => true,
-            'dados' => Funcionario::all()
+            'dados' => Funcionario::all(),
         ]);
     }
 }

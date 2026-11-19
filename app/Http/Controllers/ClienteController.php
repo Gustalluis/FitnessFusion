@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cliente;
-use Illuminate\Http\Request;
 
 class ClienteController extends Controller
 {
@@ -15,7 +14,7 @@ class ClienteController extends Controller
         // Retorna os dados em formato JSON (ótimo para testar APIs e backend)
         return response()->json([
             'sucesso' => true,
-            'dados' => $clientes
+            'dados' => $clientes,
         ]);
     }
 }

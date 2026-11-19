@@ -2,7 +2,9 @@
 
 Aplicação web full-stack para gestão de academias (planos de assinatura, matrículas, alunos, equipe e acompanhamento físico), reescrita do zero em **Laravel** com foco em arquitetura limpa, integridade de dados e segurança de aplicações.
 
-> **Status do projeto:** 🚧 Em desenvolvimento — **Fase 1 de 10 em andamento** (modelagem relacional e migrations concluídas; restam Enums, factories, seeders e aplicação no Supabase).
+> **Status do projeto:** 🚧 Em desenvolvimento — **Fase 1 de 10 em andamento** (modelagem relacional, migrations e Enums de domínio concluídos; restam ajuste dos models, factories, seeders e aplicação no Supabase).
+
+> ⚠️ **Aviso:** as rotas JSON atuais (`/clientes`, `/funcionarios`, `/planos`, `/inscricoes`) são endpoints provisórios de desenvolvimento, **sem autenticação**. Elas serão protegidas por login, Policies e API Resources na Fase 2 e não devem ser expostas em produção até lá.
 
 ---
 
@@ -22,7 +24,9 @@ Este projeto nasce da refatoração completa de um sistema legado em PHP procedu
 * **Armazenamento de Credenciais (✅ Implementado):** Senhas armazenadas com hash criptográfico (Bcrypt), ocultação automática na serialização do Model (`$hidden`) e índice único case-insensitive (`lower(email)`) no PostgreSQL.
 * **Integridade no Motor do Banco (✅ Implementado):** Defesa em profundidade com `CHECK` constraints (valores monetários não negativos, validação de CPF numérico e períodos contratuais), chaves estrangeiras com `ON DELETE RESTRICT` e índice único parcial garantindo no máximo uma inscrição `ativa` por cliente.
 * **Blindagem do Banco em Produção / Supabase (✅ Implementado):** Data API desativada + Row Level Security (RLS) ativo: duas camadas independentes impedindo exposição direta das tabelas na internet.
-* **Gestão de Segredos (✅ Implementado):** Credenciais isoladas via `.env` fora do versionamento (`✅`).
+* **Gestão de Segredos (✅ Implementado):** Credenciais isoladas via `.env` fora do versionamento; as credenciais expostas no código legado foram revogadas e os acessos antigos desativados.
+* **Proteção contra Mass Assignment (✅ Implementado):** Colunas que definem permissão (`role`, `ativo`) ficam fora do `$fillable` do Model `User`, impedindo escalada de privilégio por campos injetados em formulários.
+* **Tipagem do Domínio com Enums (✅ Implementado):** Enums do PHP (`Role`, `StatusInscricao`) espelham os `CHECK` do banco e são aplicados via cast no Eloquent: valores inválidos falham na aplicação e no banco, nunca em silêncio.
 * **Autenticação e Autorização Granular (🔜 Fase 2):** Fluxo de login com proteção de sessão e controle de acesso baseado em papéis (RBAC) via Middlewares e Laravel Policies para isolar rotas administrativas, financeiras e dados pessoais (LGPD).
 
 ---
@@ -74,5 +78,3 @@ Este projeto nasce da refatoração completa de um sistema legado em PHP procedu
 
 * [Requisitos Funcionais e Não Funcionais](docs/requisitos.md)
 * [Modelo de Dados, Diagrama ER e Mapa LGPD](docs/modelo-dados.md)
-
----

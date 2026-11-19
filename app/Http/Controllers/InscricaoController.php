@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Inscricao;
-use Illuminate\Http\Request;
 
 class InscricaoController extends Controller
 {
@@ -14,7 +13,7 @@ class InscricaoController extends Controller
 
         return response()->json([
             'sucesso' => true,
-            'dados' => $inscricoes
+            'dados' => $inscricoes,
         ]);
     }
 }

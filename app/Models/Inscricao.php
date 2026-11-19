@@ -2,11 +2,19 @@
 
 namespace App\Models;
 
+use App\Enums\StatusInscricao;
 use Illuminate\Database\Eloquent\Model;
 
 class Inscricao extends Model
 {
     protected $table = 'inscricoes';
+
+    protected function casts(): array
+    {
+        return [
+            'status' => StatusInscricao::class,
+        ];
+    }
 
     // Uma inscrição pertence a um Cliente
     public function cliente()
