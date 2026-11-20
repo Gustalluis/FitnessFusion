@@ -2,7 +2,7 @@
 
 Aplicação web full-stack para gestão de academias (planos de assinatura, matrículas, alunos, equipe e acompanhamento físico), reescrita do zero em **Laravel** com foco em arquitetura limpa, integridade de dados e segurança de aplicações.
 
-> **Status do projeto:** 🚧 Em desenvolvimento — **Fase 1 de 10 em andamento** (modelagem relacional, migrations e Enums de domínio concluídos; restam ajuste dos models, factories, seeders e aplicação no Supabase).
+> **Status do projeto:** 🚧 Em desenvolvimento — **Fase 1 de 10 em andamento** (modelagem relacional, migrations, Enums de domínio e models com relações tipadas e casts concluídos; restam factories, seeders e aplicação no Supabase).
 
 > ⚠️ **Aviso:** as rotas JSON atuais (`/clientes`, `/funcionarios`, `/planos`, `/inscricoes`) são endpoints provisórios de desenvolvimento, **sem autenticação**. Elas serão protegidas por login, Policies e API Resources na Fase 2 e não devem ser expostas em produção até lá.
 
