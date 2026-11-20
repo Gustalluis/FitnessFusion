@@ -2,7 +2,7 @@
 
 Aplicação web full-stack para gestão de academias (planos de assinatura, matrículas, alunos, equipe e acompanhamento físico), reescrita do zero em **Laravel** com foco em arquitetura limpa, integridade de dados e segurança de aplicações.
 
-> **Status do projeto:** 🚧 Em desenvolvimento — **Fase 1 de 10 em andamento** (modelagem relacional, migrations, Enums de domínio e models com relações tipadas e casts concluídos; restam factories, seeders e aplicação no Supabase).
+> **Status do projeto:** 🚧 Em desenvolvimento — **Fase 1 de 10 em andamento** (modelagem relacional, migrations, Enums de domínio, models com relações tipadas e factories concluídos; restam seeders e aplicação no Supabase).
 
 > ⚠️ **Aviso:** as rotas JSON atuais (`/clientes`, `/funcionarios`, `/planos`, `/inscricoes`) são endpoints provisórios de desenvolvimento, **sem autenticação**. Elas serão protegidas por login, Policies e API Resources na Fase 2 e não devem ser expostas em produção até lá.
 
@@ -27,6 +27,10 @@ Este projeto nasce da refatoração completa de um sistema legado em PHP procedu
 * **Gestão de Segredos (✅ Implementado):** Credenciais isoladas via `.env` fora do versionamento; as credenciais expostas no código legado foram revogadas e os acessos antigos desativados.
 * **Proteção contra Mass Assignment (✅ Implementado):** Colunas que definem permissão (`role`, `ativo`) ficam fora do `$fillable` do Model `User`, impedindo escalada de privilégio por campos injetados em formulários.
 * **Tipagem do Domínio com Enums (✅ Implementado):** Enums do PHP (`Role`, `StatusInscricao`) espelham os `CHECK` do banco e são aplicados via cast no Eloquent: valores inválidos falham na aplicação e no banco, nunca em silêncio.
+* **Fonte Única de Dados Pessoais (✅ Implementado):** CPF, data de nascimento e telefone ficam apenas em `users`, mesmo quando a pessoa é funcionária e aluna ao mesmo tempo, sem cópias divergentes de dados pessoais. A obrigatoriedade é garantida pelo próprio banco via `CHECK` condicional.
+* **Exposição Mínima por Padrão (✅ Implementado):** CPF, data de nascimento e telefone ficam ocultos em qualquer serialização do Model (`#[Hidden]`); só serão expostos explicitamente via API Resources onde houver autorização.
+* **Factories Coerentes com as Regras do Domínio (✅ Implementado):** Dados de teste gerados respeitando as constraints do banco (CPF numérico, unicidade, valor contratado igual ao preço do plano, término calculado pela duração), sem falhas intermitentes.
+* **Direito de Exclusão via Anonimização (🟡 Parcial):** Banco preparado para o Art. 18 da LGPD: a coluna `anonimizado_em` e as regras `CHECK` permitem apagar dados civis apenas de contas anonimizadas e inativas, sem apagar o histórico financeiro protegido por `ON DELETE RESTRICT` (`✅`); a rotina de anonimização chega na Fase 2/6 (`🔜`).
 * **Autenticação e Autorização Granular (🔜 Fase 2):** Fluxo de login com proteção de sessão e controle de acesso baseado em papéis (RBAC) via Middlewares e Laravel Policies para isolar rotas administrativas, financeiras e dados pessoais (LGPD).
 
 ---

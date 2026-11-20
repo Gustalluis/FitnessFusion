@@ -3,11 +3,14 @@
 namespace App\Models;
 
 use App\Enums\StatusInscricao;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Inscricao extends Model
 {
+    use HasFactory;
+
     protected $table = 'inscricoes';
 
     protected function casts(): array
@@ -20,13 +23,11 @@ class Inscricao extends Model
         ];
     }
 
-    // Uma inscrição pertence a um Cliente
     public function cliente(): BelongsTo
     {
         return $this->belongsTo(Cliente::class, 'cliente_id');
     }
 
-    // Uma inscrição pertence a um Plano
     public function plano(): BelongsTo
     {
         return $this->belongsTo(Plano::class, 'plano_id');

@@ -9,7 +9,8 @@ Este documento lista os requisitos funcionais e não funcionais planejados para 
 ## Requisitos Funcionais
 
 ### 1. Gestão de Alunos (Clientes)
-* Funcionário cadastra aluno.
+* Funcionário cadastra aluno (CPF e data de nascimento obrigatórios).
+* Funcionário matricula como aluno uma pessoa que já é funcionária, sem criar uma segunda conta.
 * Funcionário edita dados do aluno.
 * Funcionário lista alunos cadastrados.
 * Aluno visualiza seus próprios dados cadastrais.
@@ -21,10 +22,12 @@ Este documento lista os requisitos funcionais e não funcionais planejados para 
 * Aluno visualiza planos disponíveis.
 * Funcionário realiza inscrição de um aluno em um plano.
 * Aluno visualiza sua inscrição ativa e histórico de matrículas.
-* Funcionário atualiza o status da inscrição (`ativa`, `vencida`, `cancelada`).
+* Funcionário cancela uma inscrição (`status = 'cancelada'`).
+* O sistema marca automaticamente como `vencida` toda inscrição ativa cujo período terminou.
+* Funcionário renova a matrícula de um aluno com inscrição vencida.
 
 ### 3. Gestão de Funcionários
-* Administrador cadastra funcionário.
+* Administrador cadastra funcionário (CPF e data de nascimento obrigatórios).
 * Administrador e funcionário editam dados cadastrais permitidos.
 * Administrador lista funcionários e remunerações.
 
@@ -59,5 +62,7 @@ Este documento lista os requisitos funcionais e não funcionais planejados para 
 * **Tratamento Seguro de Erros:** Mensagens internas de banco de dados, exceções SQL ou stack traces nunca devem ser exibidos ao usuário final em produção.
 * **Integridade no Banco de Dados:** Regras críticas de domínio (valores não negativos, unicidade de inscrição ativa, formatos de documentos e chaves estrangeiras com `RESTRICT`) devem ser garantidas diretamente no PostgreSQL via constraints.
 * **Conformidade e Minimização (LGPD):** Coleta estritamente limitada aos dados necessários para a operação, com restrição de acesso a dados financeiros (salários) e dados sensíveis de saúde (avaliações físicas).
-
----
+* **Fonte Única dos Dados Pessoais:** Dados civis (CPF, data de nascimento, telefone) são armazenados uma única vez por pessoa, independentemente de quantos papéis ela exerce no sistema.
+* **Dados Civis Obrigatórios:** Toda pessoa ativa no sistema deve ter CPF e data de nascimento válidos, garantido diretamente pelo banco de dados.
+* **Direito de Exclusão (LGPD, Art. 18):** Pedidos de eliminação de dados pessoais são atendidos por anonimização e desativação da conta, com registro da data de atendimento, preservando o histórico financeiro exigido pela operação.
+* **Exposição Mínima de Dados Pessoais:** Dados civis (CPF, data de nascimento, telefone) ficam ocultos por padrão em qualquer serialização e só são expostos explicitamente onde houver necessidade e autorização.
